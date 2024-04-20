@@ -76,7 +76,7 @@ return true;
         <!-- Nested Row within Card Body -->
         <div class="row">
           <div class="col-lg-5 d-none d-lg-block text-center">
-            <img class="mt-5 w-75 h-65" src="https://i.pinimg.com/564x/d8/5f/2e/d85f2e49bf6d1bce9f81fd7a0ee3fcb5.jpg" alt="">
+            <img class="mt-5 w-75 h-65 " src="https://i.pinimg.com/564x/d8/5f/2e/d85f2e49bf6d1bce9f81fd7a0ee3fcb5.jpg" alt="">
           </div>
           <div class="col-lg-7">
             <div class="p-5">
