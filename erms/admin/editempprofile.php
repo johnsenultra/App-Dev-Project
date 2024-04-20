@@ -167,10 +167,6 @@ while ($row=mysqli_fetch_array($ret)) {
       </div>
       <!-- End of Main Content -->
 
-      <!-- Footer -->
-   <?php include_once('includes/footer.php');?>
-      <!-- End of Footer -->
-
     </div>
     <!-- End of Content Wrapper -->
 
