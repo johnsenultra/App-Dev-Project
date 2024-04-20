@@ -13,7 +13,17 @@ if (isset($_POST['submit'])) {
             VALUES ($employee_id, '$start_date', '$end_date', '$reason')";
 
     if ($con->query($sql) === TRUE) {
-        echo "Leave request submitted successfully.";
+        echo '<script>
+            document.addEventListener("DOMContentLoaded", function() {
+                Swal.fire({
+                    toast: true,
+                    text: "Leave request submitted successfully.",
+                    icon: "success",
+                    showConfirmButton: false,
+                    timer: 4000
+                });
+            });
+      </script>';
     } else {
         echo "Error: " . $sql . "<br>" . $con->error;
     }
