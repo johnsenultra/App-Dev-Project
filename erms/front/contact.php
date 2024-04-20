@@ -2,25 +2,26 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 
-<div class="topnav" id="myTopnav">
- <img src="images/logo.jpg" class="image1" alt="logo" />
+    <div class="topnav" id="myTopnav">
+    <img src="images/logo_tech.png" class="image1 ms-5" style="width: 10%; height: 52px;" alt="logo" />
 
- <a href="loginsystem/admin/index.php">Admin</a>
-<a href="loginsystem/index.php">login/Register</a>
- <a href="contact.php" class="active">Contact</a>
-  <a href="aboutus.html">About us</a>
-  <a href="services.html">Services</a>
-  <a href="index.html" >Home</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
+        <a href="../admin"">Admin</a>
+        <a href="../index.php">login/Register</a>
+        <a href="contact.php" class="active">Contact</a>
+        <a href="aboutus.html">About us</a>
+        <a href="services.html">Services</a>
+        <a href="index.html" >Home</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+    </div>
 
 
 <?php
@@ -51,9 +52,7 @@ require('db.php');
     }else{
         ?>
 
-
-  
-              <div class="form">
+            <div class="form">
 
 <form name="contact" action="" method="post">
 
@@ -97,25 +96,23 @@ padding: 80px;
 
 
 <div class="container">
-<form name="registration" action="" method="post">
-<label for="name">Name</label>
-<input type="text" id="name" name=" name" placeholder="Your name.."required>
-<label for="email">E-mail</label>
-<input type="text" id="email" name=" email" placeholder="E-mail " required>
+    <form name="registration" action="" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name=" name" placeholder="Your name.."required>
+        <label for="email">E-mail</label>
+        <input type="text" id="email" name=" email" placeholder="E-mail " required>
 
-<label for="subject">Subject</label><br>
-<textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"required></textarea>   <br>
-
-<center><input type="submit" name="submit" value="Submit" /></center>
-</form>
+        <label for="subject">Subject</label><br>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"required></textarea>   <br>
+        <div class="text-center">
+            <input class="round-3" type="submit" name="submit" value="Submit"style="background: #007bff" />
+        </div>
+    </form>
 </div>
-</form>
-<center> GO BACK TO HOME
-<a href="index.html" target="_top">click here </a>
-</p></center>
+<center style="decation: none;"> GO BACK TO
+    <a href="index.html" target="_top" style="decoration: none;">HOME ?</a>
+</center>
 <?php } ?>
-
-
 
 </body>
 </html>

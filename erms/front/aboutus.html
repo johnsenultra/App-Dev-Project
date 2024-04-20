@@ -2,18 +2,33 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="style.css">
 
-<STYLE>
+
+<style>
   * {box-sizing: border-box}
 
-.container {
-  width: 100%;
-  background-color: #ddd;
-}
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+  }
 
-.skills {
+  .container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  h1,
+  h3 {
+      color: #007bff;
+  }
+</style>
+
+<!-- .skills {
   text-align: right;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -23,69 +38,66 @@
 .PETROLING {width: 79%; background-color: rgb(175, 173, 76);}
 .STATIC {width: 90%; background-color: rgb(33, 131, 243);}
 .ALARAM {width: 88%; background-color: #f44336;}
-.EVENTS {width: 70%; background-color: #723030;}
+.EVENTS {width: 70%; background-color: #723030;} -->
 </STYLE>
 </head>
 <body>
 
-<div class="topnav" id="myTopnav">
- <img src="images/logo.jpg" class="image1" alt="logo" />
+  <div class="topnav" id="myTopnav">
+    <img src="images/logo_tech.png" class="image1 ms-5" style="width: 10%; height: 52px;" alt="logo" />
 
- <a href="loginsystem/admin/index.php">Admin</a>
- <a href="loginsystem/login.php">login/Register</a>
- <a href="contact.php">Contact</a>
-  <a href="aboutus.html" class="active">About us</a>
-  <a href="services.html">Services</a>
-  <a href="index.html">Home</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <a href="../admin"">Admin</a>
+    <a href="../index.php">login/Register</a>
+    <a href="contact.php">Contact</a>
+    <a href="aboutus.html" class="active">About us</a>
+    <a href="services.html">Services</a>
+    <a href="index.html">Home</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
-  </a>
-</div>
-<myHero> ABOUT US </myHero>
-
-<div style="padding-left:16px">
-</div>
-
-<br>
-<hr>
-<br>
-
-
-
-<CENTER><h1>RANKING IN 2018</h1></CENTER>
-<div style="padding-left:16px">
+    </a>
   </div>
-  
+  <myHero> ABOUT US </myHero>
 
-<p>PETROLING</p>
-<div class="container">
-  <div class="skills PETROLING">90%</div>
+  <div style="padding-left:16px">
+  </div>
+
+  <div class="container-fluid mb-5">
+    <h3>TechWise Solutions is a leading IT consulting and solutions provider dedicated to helping businesses thrive  in the digital era. We specialize in delivering innovative and effective technology solutions tailored to our clients' specific needs.</h3>
+    <hr>
+    <br>
+    <h3>Our Mission</h3>
+    <p>Our mission is to empower organizations with cutting-edge technology solutions that drive growth, efficiency, and success.</p>
+      <br>
+    <h3>Our Services</h3>
+    <ul>
+        <li>IT Consulting Services</li>
+        <li>Software Development</li>
+        <li>Cloud Solutions</li>
+        <li>Cybersecurity Services</li>
+        <li>Managed IT Services</li>
+        <li>Data Analytics and Business Intelligence</li>
+        <li>Internet of Things (IoT) Solutions</li>
+        <li>Digital Marketing and E-commerce Solutions</li>
+        <li>Virtualization and Infrastructure Services</li>
+        <li>Technology Training and Workshops</li>
+    </ul>
+    <br>
+    <h3>Why Choose Us?</h3>
+    <p>At TechWise Solutions, we are committed to excellence in every aspect of our work. Here's why you should
+        choose us:</p>
+    <ul>
+        <li>Experienced and knowledgeable team of IT professionals</li>
+        <li>Customized solutions tailored to your business goals</li>
+        <li>Proven track record of successful project delivery</li>
+        <li>Focus on innovation and continuous improvement</li>
+        <li>Exceptional customer service and support</li>
+    </ul>
 </div>
 
-<p>STATIC</p>
-<div class="container">
-  <div class="skills STATIC">80%</div>
-</div>
-
-<p>ALARAM MONITERING</p>
-<div class="container">
-  <div class="skills ALARAM">88%</div>
-</div>
-
-<p>EVENT SECURITY</p>
-<div class="container">
-  <div class="skills EVENTS">70%</div>
-</div>
-
-
-<BR>
-  <BR>
-    
-
-
-
-
-
+<!-- Bootstrap JS and dependencies (optional) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>

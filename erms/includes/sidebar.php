@@ -62,6 +62,12 @@
           <i class="fas fa-sign-out-alt"></i>
           <span>Apply Leave</span></a>
       </li>
+
+      <li class="nav-item">
+          <a class="nav-link" href="user_leave.php">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>User Leave</span></a>
+      </li>
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 

@@ -2,8 +2,9 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="style .css">
+<link rel="stylesheet" href="style.css">
 
 <script type="text/javascript">
         function validate_form() {
@@ -39,99 +40,87 @@
         //-->
     </script>
 </head>
-<body>
+<body style="background: #eb782c">
 
-<div class="topnav" id="myTopnav">
- <img src="images/logo.jpg" class="image1" alt="logo" />
- <a href="loginsystem/admin/index.php">Admin</a>
- <a href="loginsystem/index.php">login/Register</a>
- <a href="contact.php">Contact</a>
- <a href="aboutus.html">About us</a>
- <a href="services.html">Services</a>
- <a href="index.html" class="active">Home</a>
- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-<myHero>
-<h2>JOIN FRONTLINE SECURITY</h2>
+    <div class="topnav container-fluid" id="myTopnav">
+        <img src="images/logo_tech.png" class="image1 ms-5" style="width: 10%; height: 52px;" alt="logo" />
+        
+        <a href="../admin">Admin</a>
+        <a href="../index.php">login/Register</a>
+        <a href="contact.php">Contact</a>
+        <a href="aboutus.html">About us</a>
+        <a href="services.html">Services</a>
+        <a href="index.html" class="active" >Home</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    
+    <div class="container-fluid h-100 text-white">
+        <form action="" class="bg-dark px-3" name="emp" onsubmit="return validate_form();" method="post">
+            <h1 class="text-white pt-5">Employee Registration Form</h1>
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-md-3">
+                        <label for="emp_name">Employee Name:</label>
+                        <input type="text" class="form-control" name="emp_name">
+                    </div>
 
+                    <div class="col-md-3">
+                        <label for="num">Employee Number:</label>
+                        <input type="text" class="form-control" name="num" onkeypress="return isNumberKey(event)">
+                    </div>
 
+                    <div class="col-md-3">
+                        <label for="S2">Address:</label>
+                        <input type="text" class="form-control" rows="4" maxlen="200" name="S2" cols="20">
+                    </div>
 
+                    <div class="col-md-3">
+                        <label for="txtFname1">Contact Number:</label>
+                        <input type="text" class="form-control" onkeypress="return isNumberKey(event)" name="txtFName1">
+                    </div>
+                </div>
 
-</div>
-<form name="emp" action="" onsubmit="return validate_form();" method="post">
-        <table align="center" width=40% width="100%" cellspacing="2" cellpadding="2" border="5">
-            <tr>
-                <td colspan="2" align="center"><b>Employee Registration Form.</b></td>
- 
-            </tr>
-            <tr>
-                <td align="left" valign="top" width="41%">Employee Name<span style="color:red">*</span></td>
- 
-                <td width="57%"><input type="text" value="" name="emp_name" size="24"></td>
-            </tr>
-            <tr>
-                <td align="left" valign="top" width="41%">Employee Number<span style="color:red">*</span></td>
-                <td width="57%">
-                    <input type="text" value="" name="num" onkeypress="return isNumberKey(event)" size="24"></td>
-            </tr>
-            <tr>
-                <td align="left" valign="top" width="41%">Address</td>
- 
-                <td width="57%"><textarea rows="4" maxlen="200" name="S2" cols="20"></textarea></td>
-            </tr <tr>
- 
-            <td align="left" valign="top" width="41%">Contact Number</td>
-            <td width="57%">
-                <input type="text" value="" onkeypress="return isNumberKey(event)" name="txtFName1" size="24"></td>
-            </tr>
-            <tr>
-                <td align="left" valign="top" width="41%">Job Location</td>
-                <td width="57%"><select name="mydropdown">
-<option value="Default">Default</option>
-<option value="Chennai">Chennai</option>
-<option value="Bangalore">Bangalore</option>
-<option value="Chennai">Pune</option>
-<option value="Bangalore">Mysore</option>
-<option value="Chennai">Chandigarh</option>
- 
-</select></td>
- 
- 
-            </tr>
- 
-            <tr>
-                <td align="left" valign="top" width="41%">Designation</td>
-                <td width="57%">
-                    <select name="mydropdown">
-<option value="Default">Default</option>
-<option value="Systems Engineer">Systems Engineer</option>
-<option value="Senior Systems Engineer">Senior Systems Engineer</option>
-<option value="Technology Analyst">Technology Analyst</option>
-<option value="Technology Lead">Technology Lead</option>
-<option value="Project Manager">Project Manager</option>
- 
- 
-</select></td>
- 
- 
-            </tr>
-            <tr>
-                <td align="left" valign="top" width="41%">Email<span style="color:red">*</span></td>
-                <td width="57%">
-                    <input type="text" value="" name="email_id" size="24"></td>
-            </tr>
- 
-            <tr>
-                <td colspan="2">
-                    <p align="center">
-                        <input type="submit" value="  Submit" name="B4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="reset" value="  Reset All   " name="B5"></td>
-            </tr>
- 
-        </table>
-    </form></myHero>
+                <div class="row my-4">
+                    <div class="col-md-3">
+                        <label for="mydropdown">Job Location:</label>
+                        <select name="mydropdown" class="form-control" id="">
+                            <option value="Default">Default</option>
+                            <option value="Philippines">Philippines</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Singapore">Singapore</option>
+                            <option value="US">US</option>
+                            <option value="Taiwan">Taiwan</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="mydropdown">Designation:</label>
+                        <select name="mydropdown" class="form-control" id="">
+                            <option value="Default">Default</option>
+                            <option value="Software Development">Software Development</option>
+                            <option value="IT Consulting Services">IT Consulting Services</option>
+                            <option value="Cloud Solutins">Cloud Solutions</option>
+                            <option value="Cybersecurity Services">Cybersecurity Services</option>
+                            <option value="Data Analytics">Data Analytics</option>
+                            <option value="Digital Marketing and E-Commerce Solutions">Digital Marketing and E-Commerce Solutions</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="email_id">Email:</label>
+                        <input type="text" class="form-control" name="email_id">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <input class="btn btn-primary w-50 ms-5 mb-2" type="submit" value="Submit" name="B4"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br>
+                <input class="btn btn-danger w-50 me-4 mb-5" type="reset" value="Clear" name="B5">
+            </div>
+
+        </form>
+    </div>
 </body>
- 
 </html>
