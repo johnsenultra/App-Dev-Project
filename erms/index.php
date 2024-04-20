@@ -48,10 +48,8 @@
   <!-- Page Wrapper -->
   <div id="wrapper" >
 
-  
-
     <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content-wrapper" class="d-flex flex-column mb-5">
 
       <!-- Main Content -->
       <div id="content">
@@ -60,10 +58,17 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
+         <!-- <div class="position-absolute w-50" style="opacity: 1.1; left:20%;">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#0F62FE" d="M38,-43.6C54.3,-31.5,76.2,-24.4,78.3,-13.6C80.5,-2.8,62.8,11.6,51.8,29.2C40.8,46.7,36.4,67.4,25.6,72.1C14.8,76.7,-2.4,65.4,-22.1,59C-41.7,52.5,-63.8,51,-67,40.9C-70.2,30.7,-54.6,11.9,-50.8,-8.9C-47,-29.7,-55.1,-52.5,-48.6,-66.2C-42.1,-80,-21.1,-84.7,-5.1,-78.6C10.8,-72.5,21.6,-55.6,38,-43.6Z" transform="translate(100 100)" />
+            </svg>
+          </div> -->
+
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4" style="margin-top: 2%">
             <h1 class="h3 mb-0 text-gray-800">Employee Record Management System</h1>
           </div>
+          
 
           <div class="row">
             <div class="col-md-4">
@@ -146,7 +151,9 @@
       <!-- End of Main Content -->
 
       <!-- Footer -->
-    <?php include_once('includes/footer.php');?>
+      <div class="fixed-bottom">
+        <?php include_once('includes/footer.php');?>
+      </div>
       <!-- End of Footer -->
 
     </div>
