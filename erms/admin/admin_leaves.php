@@ -45,7 +45,7 @@ $result = $con->query($sql);
                                     echo "<td>" . $row['start_date'] . "</td>";
                                     echo "<td>" . $row['end_date'] . "</td>";
                                     echo "<td>" . $row['reason'] . "</td>";
-                                    echo "<td><a href='approve_leave.php?id=" . $row['id'] . "' class='btn btn-success'>Approve</a> <a href='decline_leave.php?id=" . $row['id'] . "' class='btn btn-danger'>Decline</a></td>";
+                                    echo "<td><a href='approve_leave.php?id=" . $row['id'] . "' class='btn btn-success btn-sm'>Approve</a> <a href='decline_leave.php?id=" . $row['id'] . "' class='btn btn-danger btn-sm'>Decline</a></td>";
                                     echo "</tr>";
                                 }
                             } else {
