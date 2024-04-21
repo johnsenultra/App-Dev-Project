@@ -42,7 +42,7 @@
 
     <li class="nav-item">
       <a class="nav-link" href="admin_leaves.php">
-        <i class="fas fa-fw fa-chart-area"></i>
+        <i class="fas fa-sign-out-alt"></i>
         <span>Leave</span></a>
     </li>
     
