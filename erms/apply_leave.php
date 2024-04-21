@@ -65,9 +65,9 @@ if (isset($_SESSION['leave_request_submitted']) && $_SESSION['leave_request_subm
                 <?php include_once('includes/header.php')?>
                 <!-- End of Topbar -->
                 <div class="container-fluid">
-                    <h1 class="h3 mb-4 text-gray-800">Apply For Leave</h1>
+                    <h1 class="h3 mb-4 text-gray-800" style="padding-left: 35px;">Apply For Leave</h1>
 
-                    <div class="row">
+                    <div class="row text">
                         <div class="col-3">
                             
                         </div>
@@ -75,15 +75,15 @@ if (isset($_SESSION['leave_request_submitted']) && $_SESSION['leave_request_subm
                             
                             <form method="post" action="">
                                 <label>Start Date:</label>
-                                <input  class="form-control" type="date" name="start_date" required><br><br>
+                                <input  class="form-control" type="date" name="start_date" required><br>
                                 
                                 <label>End Date:</label>
-                                <input class="form-control" type="date" name="end_date" required><br><br>
+                                <input class="form-control" type="date" name="end_date" required><br>
                                 
                                 <label>Reason:</label><br>
                                 <textarea class="form-control" name="reason" rows="4" cols="50" required></textarea><br><br>
                                 
-                                <input type="submit" name="submit" value="Submit" class="btn btn-primary">
+                                <input  type="submit" name="submit" value="Submit" class="btn btn-primary form-control">
                             </form>
                         </div>
                         <div class="col-3">
