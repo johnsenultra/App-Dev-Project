@@ -8,25 +8,34 @@ if (isset($_POST['submit'])) {
     $end_date = $_POST['end_date'];
     $reason = $_POST['reason'];
 
-    // Insert leave request into database
+    // insert leave request into database
     $sql = "INSERT INTO leave_requests (employee_id, start_date, end_date, reason)
             VALUES ($employee_id, '$start_date', '$end_date', '$reason')";
 
     if ($con->query($sql) === TRUE) {
-        echo '<script>
-            document.addEventListener("DOMContentLoaded", function() {
-                Swal.fire({
-                    toast: true,
-                    text: "Leave request submitted successfully.",
-                    icon: "success",
-                    showConfirmButton: false,
-                    timer: 4000
-                });
-            });
-      </script>';
+        $_SESSION['leave_request_submitted'] = true;
+        header('Location: apply_leave.php');
+        exit;
     } else {
         echo "Error: " . $sql . "<br>" . $con->error;
     }
+}
+
+if (isset($_SESSION['leave_request_submitted']) && $_SESSION['leave_request_submitted']) {
+    echo '<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            Swal.fire({
+                toast: true,
+                text: "Leave request submitted successfully.",
+                icon: "success",
+                showConfirmButton: false,
+                timer: 4000
+            });
+        });
+    </script>';
+
+    unset($_SESSION['leave_request_submitted']);
+
 }
 ?>
 
@@ -36,6 +45,7 @@ if (isset($_POST['submit'])) {
 <html>
 <head>
     <title>Apply for Leave</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <!-- Custom styles for this template-->
@@ -88,6 +98,5 @@ if (isset($_POST['submit'])) {
         </div>
     </div>
 
-    
 </body>
 </html>
