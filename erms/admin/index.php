@@ -13,7 +13,7 @@ if(isset($_POST['login']))
      header('location:welcome.php');
     }
     else{
-      echo "Invalid Details";
+      $alert="Invalid Details";
     }
   }
   ?>
@@ -66,6 +66,10 @@ if(isset($_POST['login']))
                   <div class="text-center">
                     <h1 class="h4 fw-bold text-gray-900 mb-4" style="text-transform: uppercase; font-weight: bold;">Admin login!</h1>
                   </div>
+                  <p style="font-size:16px; color:red" align="center"> <?php if($alert){
+                      echo $alert;
+                    }  ?>
+                  </p>
                   <form class="user" method="post" action="index.php">
                     <div class="form-group">
                       <input type="test" class="form-control form-control-user" id="username" name="username" aria-describedby="emailHelp" required="true" placeholder="Enter username ...">
