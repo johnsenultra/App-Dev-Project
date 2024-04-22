@@ -48,7 +48,7 @@ else {
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
+        <div class="container-fluid mt-5 pt-5">
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -57,7 +57,7 @@ else {
 
           <!-- Content Row -->
           <div class="row">
-<div class="col-xl-3 col-md-6 mb-4"></div>
+            <div class="col-xl-3 col-md-6 mb-4"></div>
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-6 col-md-6 mb-4">
               <div class="card border-left-primary shadow h-100 py-2">
@@ -67,12 +67,12 @@ else {
                       <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Hello!</div>
 
                       <?php
-$empid=$_SESSION['uid'];
-$ret=mysqli_query($con,"select EmpFname,EmpLname from employeedetail where ID='$empid'");
-$row=mysqli_fetch_array($ret);
-$fname=$row['EmpFname'];
-$lname=$row['EmpLname'];
-?>
+                        $empid=$_SESSION['uid'];
+                        $ret=mysqli_query($con,"select EmpFname,EmpLname from employeedetail where ID='$empid'");
+                        $row=mysqli_fetch_array($ret);
+                        $fname=$row['EmpFname'];
+                        $lname=$row['EmpLname'];
+                      ?>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $fname." ".$lname; ?></div>
                     </div>
                     <div class="col-auto">
