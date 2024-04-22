@@ -81,7 +81,7 @@ if(isset($_POST['submit']))
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
+        <div class="container-fluid mt-5 pt-5">
 
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">My Education</h1>
