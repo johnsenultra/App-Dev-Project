@@ -103,6 +103,7 @@ CREATE TABLE `employeedetail` (
   `EmpEmail` varchar(200) DEFAULT NULL,
   `EmpPassword` varchar(100) DEFAULT NULL,
   `EmpJoingdate` date DEFAULT NULL,
+  `profile_picture` VARCHAR(255) DEFAULT NULL,
   `PostingDate` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
