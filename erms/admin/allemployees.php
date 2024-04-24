@@ -123,9 +123,9 @@ if (strlen($_SESSION['aid']) == 0) {
                                         <td><?php echo $row['EmpJoingdate'];?></td>
                                         <td>
                                             <a href="editempprofile.php?editid=<?php echo $row['ID'];?>" title="Edit Profile Details"><i class="fa fa-edit"></i></a> |
-                                            <a href="editempeducation.php?editid=<?php echo $row['ID'];?>">Edit Education Details</a> |
-                                            <a href="editempexp.php?editid=<?php echo $row['ID'];?>">Edit Experience Details</a> |
-                                            <a href="allemployees.php?delid=<?php echo $row['ID'];?>" onclick="return confirm('Do you really want to delete?');" style="color:red">Delete</a>
+                                            <a href="editempeducation.php?editid=<?php echo $row['ID'];?>" title="Edit Education Details" style="color: orange;"><i class="fa fa-edit"></i></a> |
+                                            <a href="editempexp.php?editid=<?php echo $row['ID'];?>" title="Edit Experience Details" style="color: black;"><i class="fa fa-edit"></i></a> |
+                                            <a href="allemployees.php?delid=<?php echo $row['ID'];?>" title="Delete" onclick="return confirm('Do you really want to delete?');" style="color: red;"><i class="fas fa-trash-alt"></i></a>
                                         </td>
                                     </tr>
                                 <?php 
