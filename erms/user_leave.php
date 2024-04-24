@@ -24,7 +24,7 @@ $result = $con->query($sql);
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 <?php include_once('includes/header.php')?>
-                <div class="container mt-5">
+                <div class="container mt-5 pt-5">
                     <h2>Leave Requests</h2>
                     <table class="table">
                         <thead>

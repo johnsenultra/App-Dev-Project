@@ -64,7 +64,7 @@ if (isset($_SESSION['leave_request_submitted']) && $_SESSION['leave_request_subm
                 <!-- Topbar -->
                 <?php include_once('includes/header.php')?>
                 <!-- End of Topbar -->
-                <div class="container-fluid">
+                <div class="container-fluid mt-5 pt-5">
                     <h1 class="h3 mb-4 text-gray-800" style="padding-left: 35px;">Apply For Leave</h1>
 
                     <div class="row text">
