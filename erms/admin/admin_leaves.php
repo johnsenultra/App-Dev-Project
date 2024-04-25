@@ -2,7 +2,6 @@
 session_start();
 include('includes/dbconnection.php');
 
-// Retrieve all pending leave requests
 $sql = "SELECT * FROM leave_requests WHERE status = 'Pending'";
 $result = $con->query($sql);
 ?>
