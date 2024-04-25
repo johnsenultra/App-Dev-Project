@@ -118,14 +118,24 @@ INSERT INTO `employeedetail` (`ID`, `EmpFname`, `EmpLName`, `EmpCode`, `EmpDept`
 -- --------------------------------------------------------
 
 CREATE TABLE leave_requests (
-    id INT(11) AUTO_INCREMENT PRIMARY KEY,
-    employee_id INT(11) NOT NULL,
-    start_date DATE NOT NULL,
-    end_date DATE NOT NULL,
-    reason TEXT NOT NULL,
-    status ENUM('Pending', 'Approved', 'Declined') NOT NULL DEFAULT 'Pending'
+  id INT(11) AUTO_INCREMENT PRIMARY KEY,
+  employee_id INT(11) NOT NULL,
+  start_date DATE NOT NULL,
+  end_date DATE NOT NULL,
+  reason TEXT NOT NULL,
+  status ENUM('Pending', 'Approved', 'Declined') NOT NULL DEFAULT 'Pending'
 );
 
+ALTER TABLE employeedetail ADD INDEX(ID);
+
+CREATE TABLE employee_documents (
+    doc_id INT AUTO_INCREMENT PRIMARY KEY,
+    emp_id INT,
+    document_type VARCHAR(50),
+    document_label VARCHAR(255) NOT NULL,
+    document_path VARCHAR(255),
+    FOREIGN KEY (emp_id) REFERENCES employeedetail(ID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Table structure for table `tbladmin`
