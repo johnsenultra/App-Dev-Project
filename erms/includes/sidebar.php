@@ -68,6 +68,18 @@
           <i class="fas fa-sign-out-alt"></i>
           <span>User Leave</span></a>
       </li>
+
+      <li class="nav-item">
+          <a class="nav-link" href="torAndCert.php">
+          <i class="fas fa-certificate"></i>
+          <span>TOR & Certificate</span></a>
+      </li>
+
+      <li class="nav-item">
+          <a class="nav-link" href="view_documents.php">
+          <i class="fas fa-file"></i>
+          <span>View Documents</span></a>
+      </li>
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
