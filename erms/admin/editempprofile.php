@@ -77,89 +77,97 @@ if(isset($_POST['submit']))
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">Edit Employee Profile</h1>
 
-<p style="font-size:16px; color:red" align="center"> <?php if($msg){
-    echo $msg;
-  }  ?> </p>
+          <p style="font-size:16px; color:red" align="center"> <?php if($msg){
+              echo $msg;
+            }  ?> </p>
 
-<form class="user" method="post" action="">
-  <?php
-$aid=$_GET['editid'];
-$ret=mysqli_query($con,"select * from employeedetail where ID='$aid'");
-$cnt=1;
-while ($row=mysqli_fetch_array($ret)) {
+          <form class="user" method="post" action="">
+            <?php
+              $aid=$_GET['editid'];
+              $ret=mysqli_query($con,"select * from employeedetail where ID='$aid'");
+              $cnt=1;
+              while ($row=mysqli_fetch_array($ret)) {
+            ?>
+            <div class="row">
+              <div class="col-4 mb-3">First Name</div>
+              <div class="col-8 mb-3">   
+                <input type="text" class="form-control form-control-user" id="FirstName" name="FirstName" aria-describedby="emailHelp" value="<?php  echo $row['EmpFname'];?>">
+              </div>
+            </div>  
+              
+            <div class="row">
+              <div class="col-4 mb-3">Last Name </div>
+              <div class="col-8 mb-3">  
+                <input type="text" class="form-control form-control-user" id="LastName" name="LastName" aria-describedby="emailHelp" value="<?php  echo $row['EmpLName'];?>">
+              </div>  
+            </div>
 
-?>
-               <div class="row">
-                <div class="col-4 mb-3">First Name</div>
-                   <div class="col-8 mb-3">   <input type="text" class="form-control form-control-user" id="FirstName" name="FirstName" aria-describedby="emailHelp" value="<?php  echo $row['EmpFname'];?>"></div>
-                    </div>  
-                    <div class="row">
-                      <div class="col-4 mb-3">Last Name </div>
-                     <div class="col-8 mb-3">  <input type="text" class="form-control form-control-user" id="LastName" name="LastName" aria-describedby="emailHelp" value="<?php  echo $row['EmpLName'];?>"></div>  
-                     </div>
+            <div class="row">
+              <div class="col-4 mb-3">Employee Code </div>
+              <div class="col-8 mb-3">
+                <input type="text" class="form-control form-control-user" id="EmpCode" name="EmpCode" aria-describedby="emailHelp" value="<?php  echo $row['EmpCode'];?>">
+              </div>
+            </div>
 
+            <div class="row">
+              <div class="col-4 mb-3">Employee Dept</div>
+              <div class="col-8 mb-3">
+                <input type="text" class="form-control form-control-user" id="EmpDept" name="EmpDept" aria-describedby="emailHelp" value="<?php  echo $row['EmpDept'];?>">
+              </div>
+            </div>
+              
+            <div class="row">
+              <div class="col-4 mb-3">Employee Desigantion</div>
+              <div class="col-8 mb-3">
+                <input type="text" class="form-control form-control-user" id="EmpDesignation" name="EmpDesignation" aria-describedby="emailHelp" value="<?php  echo $row['EmpDesignation'];?>">
+              </div>
+            </div>
 
+            <div class="row">
+              <div class="col-4 mb-3">Employee Contact No.</div>
+              <div class="col-8 mb-3">
+                <input type="text" class="form-control form-control-user" id="EmpContactNo" name="EmpContactNo" aria-describedby="emailHelp" value="<?php  echo $row['EmpContactNo'];?>">
+              </div>
+            </div>
 
-                    <div class="row">
-                    <div class="col-4 mb-3">Employee Code </div>
-                    <div class="col-8 mb-3">
-                      <input type="text" class="form-control form-control-user" id="EmpCode" name="EmpCode" aria-describedby="emailHelp" value="<?php  echo $row['EmpCode'];?>"></div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-4 mb-3">Employee Dept</div>
-                     <div class="col-8 mb-3">
-                      <input type="text" class="form-control form-control-user" id="EmpDept" name="EmpDept" aria-describedby="emailHelp" value="<?php  echo $row['EmpDept'];?>">
-                    </div></div>
-                    <div class="row">
-                    <div class="col-4 mb-3">Employee Desigantion</div>
-
-                    <div class="col-8 mb-3">
-                      <input type="text" class="form-control form-control-user" id="EmpDesignation" name="EmpDesignation" aria-describedby="emailHelp" value="<?php  echo $row['EmpDesignation'];?>">
-                    </div></div>
-                    <div class="row">
-                      <div class="col-4 mb-3">Employee Contact No.</div>
-                    <div class="col-8 mb-3">
-                      <input type="text" class="form-control form-control-user" id="EmpContactNo" name="EmpContactNo" aria-describedby="emailHelp" value="<?php  echo $row['EmpContactNo'];?>">
-                    </div></div>
-                    <div class="row">
-                    <div class="col-4 mb-3">Email</div>
-                   <div class="col-8 mb-3">
-                      <input type="email" class="form-control form-control-user" id="Email" name="Email" aria-describedby="emailHelp" placeholder="Enter Email Address..." value="<?php  echo $row['EmpEmail'];?>" readonly="true">
-                    </div></div>
+            <div class="row">
+            <div class="col-4 mb-3">Email</div>
+              <div class="col-8 mb-3">
+                <input type="email" class="form-control form-control-user" id="Email" name="Email" aria-describedby="emailHelp" placeholder="Enter Email Address..." value="<?php  echo $row['EmpEmail'];?>" readonly="true">
+              </div>
+            </div>
                 
-                    <div class="row">
-                      <div class="col-4 mb-3">Employee Joing Date(yyyy-mm-dd)</div>
-                    <div class="col-8  mb-3">
-                      <input type="text" class="form-control form-control-user" value="<?php  echo $row['EmpJoingdate'];?>" id="jDate" name="EmpJoingdate" aria-describedby="emailHelp">
-                    </div></div>
-                    <div class="row">
-                      <div class="col-4 mb-3">Gender</div>
-                    <div class="col-4 mb-3">
-                    
-<?php if($row['EmpGender']=="Male")
-{?>
-                      <input type="radio" id="gender" name="gender" value="Male" checked="true">Male
+            <div class="row">
+              <div class="col-4 mb-3">Employee Joing Date(yyyy-mm-dd)</div>
+              <div class="col-8  mb-3">
+                <input type="text" class="form-control form-control-user" value="<?php  echo $row['EmpJoingdate'];?>" id="jDate" name="EmpJoingdate" aria-describedby="emailHelp">
+              </div>
+            </div>
 
-                     <input type="radio" name="gender" value="Female">Female
-                   <?php }  else {?>
- <input type="radio" id="gender" name="gender" value="Male" >Male
-  <input type="radio" name="gender" value="Female" checked="true">Female
-                   <?php }?>
-                    </div></div>
-<?php } ?>
-                    <div class="row" style="margin-top:4%">
-                      <div class="col-4"></div>
-                      <div class="col-4">
-                      <input type="submit" name="submit"  value="Update" class="btn btn-primary btn-user btn-block">
-                    </div>
-                    </div>
+            <div class="row">
+              <div class="col-4 mb-3">Gender</div>
+              <div class="col-4 mb-3">
+            
+                <?php if($row['EmpGender']=="Male") {?>
+                <input type="radio" id="gender" name="gender" value="Male" checked="true">Male
+
+                <input type="radio" name="gender" value="Female">Female
+                <?php }  else {?>
+                <input type="radio" id="gender" name="gender" value="Male" >Male
+                <input type="radio" name="gender" value="Female" checked="true">Female
+                <?php }?>
+              </div>
+            </div>
+            <?php } ?>
+
+            <div class="row" style="margin-top:4%">
+              <div class="col-4"></div>
+              <div class="col-4">
+                <input type="submit" name="submit"  value="Update" class="btn btn-primary btn-user btn-block mb-3">
+              </div>
+            </div>
                   
-                  </form>
-
-
-
-
+          </form>
 
         </div>
         <!-- /.container-fluid -->
