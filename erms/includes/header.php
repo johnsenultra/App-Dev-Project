@@ -1,6 +1,7 @@
 <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 1;">
+  
   <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
+    <h3 class="text-primary" style="padding-left: 14%">Employee Record Management System</h3>
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
 
