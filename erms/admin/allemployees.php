@@ -25,8 +25,7 @@ if (strlen($_SESSION['aid']) == 0) {
         $search_condition = '';
     }
 
-    // pagination
-    $limit = 10; // Number of records per page
+    $limit = 10;
     $page = isset($_GET['page']) ? $_GET['page'] : 1;
     $offset = ($page - 1) * $limit;
 
@@ -77,7 +76,7 @@ if (strlen($_SESSION['aid']) == 0) {
                                 <div class="form-group">
                                     <input type="text" class="form-control" name="search" placeholder="Search..." value="<?php echo $search; ?>">
                                 </div>
-                                <button type="submit" class="btn btn-primary">Search</button>
+                                <button type="submit" class="btn btn-primary ms-3">Search</button>
                             </form>
                         </div>
                     </div>
@@ -122,14 +121,17 @@ if (strlen($_SESSION['aid']) == 0) {
                                         <td><?php echo $row['EmpContactNo'];?></td>
                                         <td><?php echo $row['EmpJoingdate'];?></td>
                                         <td>
-                                            <a href="editempprofile.php?editid=<?php echo $row['ID'];?>" title="Edit Profile Details"><i class="fa fa-edit"></i></a> |
-                                            <a href="editempeducation.php?editid=<?php echo $row['ID'];?>" title="Edit Education Details" style="color: orange;"><i class="fa fa-edit"></i></a> |
-                                            <a href="editempexp.php?editid=<?php echo $row['ID'];?>" title="Edit Experience Details" style="color: black;"><i class="fa fa-edit"></i></a> |
-                                            <a href="allemployees.php?delid=<?php echo $row['ID'];?>" title="Delete" onclick="return confirm('Do you really want to delete?');" style="color: red;"><i class="fas fa-trash-alt"></i></a>
+                                            <a href="editempprofile.php?editid=<?php echo $row['ID']; ?>" title="Edit Profile Details"><i class="fa fa-edit"></i></a> |
+                                            <a href="editempeducation.php?editid=<?php echo $row['ID']; ?>" title="Edit Education Details" style="color: orange;"><i class="fa fa-edit"></i></a> |
+                                            <a href="editempexp.php?editid=<?php echo $row['ID']; ?>" title="Edit Experience Details" style="color: black;"><i class="fa fa-edit"></i></a> |
+                                            <a href="document_employee.php?emp_id=<?php echo urlencode($row['ID']); ?>" title="View Documents"><i class="fa fa-eye color-success"></i></a>
+                                            <a href="allemployees.php?delid=<?php echo $row['ID']; ?>" title="Delete" onclick="return confirm('Do you really want to delete?');" style="color: red;"><i class="fas fa-trash-alt"></i></a>
                                         </td>
+
                                     </tr>
                                 <?php 
                                     $cnt++;
+                                    
                                 } 
                                 ?>
                             </tbody>
